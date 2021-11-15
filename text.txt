@@ -1,0 +1,18 @@
+methods must always belong to a class (or: be instance methods of some class)
+normal methods belong to the class they're defined in (i.e. are instance methods of the class)
+class methods are just singleton methods of a Class
+singleton methods of an object are not instance methods of the class of the object; rather, they are instance methods of the singleton class of the object.
+
+ 
+foo = Array.new
+
+def foo.size
+  "Hello World!"
+end
+
+foo.size  # => "Hello World!"
+foo.class # => Array
+#Create another instance of Array Class and call size method on it
+
+bar = Array.new
+bar.size  # => 0

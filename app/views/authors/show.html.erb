@@ -1,0 +1,37 @@
+<div class="container">
+  <br> <br>
+  <div class="row">
+    <div class="col">
+      <h1><%= @author.firstname %></h1>
+
+      <h3><%= @author.firstname %> <%= @author.lastname %>, <%= @author.age %></h3>
+    </div>
+    <div class="col">
+      <br><br>
+      <%= link_to "Edit", edit_author_path(@author) %> &nbsp;
+        <%= link_to "Destroy", author_path(@author), method: :delete, data: {
+        confirm: "Are you sure?" } %>
+    </div>
+  </div>
+
+  <br>
+  <h1>Blogs</h1>
+  <% if @author.blogs.length==0 %>
+    No Blogs!
+    <% else %>
+    <%= render @author.blogs %>
+  <% end %>
+    <br><br>
+  <h2>Add a Blog:</h2>
+  <%= form_with model: [ @author, @author.blogs.build ] do |form| %>
+  <p>
+    <%= form.label :title %><br />
+    <%= form.text_field :title,class:"form-control" %>
+  </p>
+  <p>
+    <%= form.label :content %><br />
+    <%= form.text_field :content,class:"form-control" %>
+  </p>
+  <p><%= form.submit %></p>
+  <% end %>
+</div>

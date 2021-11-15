@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Authors</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @authors.each do |author| %>
+        <tr>
+          <td><a href="<%= author_path(author) %>"> <%= author.firstname %> </a></td>
+          <td><%= author.lastname %></td>
+          <td><%= author.age %></td>
+          <td><%= link_to "Edit", edit_author_path(author) %></td>
+          <td><%= link_to "Destroy", author_path(author), method: :delete, data: {
+            confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New Author",new_author_path %>
+</div>

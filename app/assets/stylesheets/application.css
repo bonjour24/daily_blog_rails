@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ #navbar-button:hover ,.navbar-link-rails:hover{
+   color: black;
+   text-decoration: none;
+   background: none;
+ }
+ #navbar-button{
+   background: none;
+ }
+ .navbar-link-rails{
+   color: black;
+ }
+
+.home_hero{
+  background-image: url('back_one.jpg');
+  min-height: 620px;
+  background-repeat: repeat-x;
+ }
+ .navy{
+  background-color: white; 
+  opacity: 0.5; 
+  filter: alpha(opacity=50);
+ }
+ #main_card{
+  width: 22rem; 
+  border-radius: 40px;
+  box-shadow: 4px 4px 4px 2px grey;
+ }
+ #main_card img{
+   height: 270px;
+ }
+
+ .hero_two{
+   background-color: rgb(255, 153, 0);
+   position: relative;
+   height: 350px;
+ }
+ .hero_three{
+  background-color: rgb(145, 0, 0);
+  position: relative;
+  height: 350px;
+ }
+ .intro_two{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+ }
